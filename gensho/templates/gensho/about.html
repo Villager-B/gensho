@@ -1,0 +1,99 @@
+{% extends 'gensho/base.html' %}
+{% load social_share %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <h1 class="display-3"><strong>What is GENSHO??</strong></h1>
+        <p class="lead">GENSHO is Phenomenon Naming Service</p>
+        <hr class="my-2">
+    </div>
+
+<div class="about">
+<div id="toc">
+<ul >
+<li><a href="#gensho">GENSHO</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a>
+<ul>
+<li><a href="#gensho%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E5%90%8D%E5%89%8D%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B">GENSHOに対して名前をつける</a></li>
+<li><a href="#gensho%E8%87%AA%E8%BA%AB%E3%81%ABlike%E3%81%99%E3%82%8B">GENSHO自身に「Like」する</a></li>
+<li><a href="#%E6%8A%95%E7%A8%BF%E3%81%95%E3%82%8C%E3%81%9F%E7%8F%BE%E8%B1%A1%E5%90%8D%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E6%8A%95%E7%A5%A8%E3%81%99%E3%82%8B">投稿された現象名に対して「投票」する</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%8A%E5%BE%8C%E3%81%AE%E4%BA%88%E5%AE%9A">今後の予定</a></li>
+<li><a href="#%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4">更新履歴</a></li>
+<li><a href="#q">お問い合わせ</a></li>
+</ul>
+</div>
+
+<hr>
+
+<h2 id="gensho" class="mb-3">GENSHO</h2>
+<p>皆さんはSNS上で度々「〇〇という現象に名前をつけたい」という投稿を見かけないでしょうか．</p>
+<p>GENSHOは「そんな明確な名前はついてないけど確かにわかる」という現象に対して勝手に名前をつけていこうではないかというサービスです．</p>
+<p>投稿される現象に対して名前をつけ，最も皆に認められた現象名をGENSHOでは今後使用していくことにします．</p>
+<p>投稿される現象はSNS上からランダムに取得しています．</p>
+<p>ランダムで投稿する関係上，不適切なものがGENSHOとして投稿される可能性があります．</p>
+<p>その場合，Twitterのアカウントにて報告していただけますと幸いです．すぐに対処します．</p>
+<p>また，<a href="https://twitter.com/tw_gensho" target="blank" rel="noreferrer noopener">Twitterのアカウント</a>に対してDMをすることでGENSHOに投稿依頼をすることができます．</p>
+<p>管理者の独断と偏見でDMから採用するGENSHOは決めることをお許しください．</p>
+
+<hr>
+
+<h2 id="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95" class="mb-3">使用方法</h2>
+<p>GENSHOは以下のことを行うことができます．</p>
+<ul>
+<li>
+<p>GENSHOに対して名前をつける</p>
+</li>
+<li>
+<p>GENSHO自身に「Like」する</p>
+</li>
+<li>
+<p>投稿された現象名に対して「投票」する</p>
+</li>
+</ul>
+
+<hr>
+
+<h3 id="gensho%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E5%90%8D%E5%89%8D%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B" class="mb-3">GENSHOに対して名前をつける</h3>
+<p>GENSHOに対して名前をつけることができます．</p>
+<p>ただしGENSHOの投稿から一日までしか命名できません．</p>
+<p>また，先着50個までしか反映されません．</p>
+<p>投稿する際に名前を書く必要があります．</p>
+<p>そのとき，Twitterの@以下を入れていただくことで自動的にTwitterへのリンクが作成されますのでうまく使用してみてください．</p>
+
+<hr>
+
+<h3 id="gensho%E8%87%AA%E8%BA%AB%E3%81%AB%E3%80%8Clike%E3%80%8D%E3%81%99%E3%82%8B" class="mb-3">GENSHO自身に「Like」する</h3>
+<p>GENSHOに対してつけられた名前に対してではなく，GENSHO自身に対して「Like」することができます．</p>
+<p>これは皆様にとって共感できるGENSHOを見つけるための機能です．</p>
+<p>「Ranking」ページでは人気のGENSHOが表示されます．</p>
+<p>こんなGENSHOあったよなぁ..と思われた場合は上にある検索欄から調べてください．</p>
+
+<hr>
+
+<h3 id="%E6%8A%95%E7%A8%BF%E3%81%95%E3%82%8C%E3%81%9F%E7%8F%BE%E8%B1%A1%E5%90%8D%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6%E3%80%8C%E6%8A%95%E7%A5%A8%E3%80%8D%E3%81%99%E3%82%8B" class="mb-3">投稿された現象名に対して「投票」する</h3>
+<p>皆様が投稿された現象名に対して「投票」できます．</p>
+<p>ここで一番投票された現象名がそのGENSHOの名前となります．</p>
+<p>投票できるのはGENSHOが投稿されてから一日までです．</p>
+
+<hr>
+
+<h2 id="%E4%BB%8A%E5%BE%8C%E3%81%AE%E4%BA%88%E5%AE%9A" class="mb-3">今後の予定</h2>
+<ul>
+<li>ユーザー登録機能の実装：ランクの導入などを検討</li>
+</ul>
+
+<hr>
+
+<h2 id="%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4" class="mb-3">更新履歴</h2>
+<p>Ver 0.1.0 β版公開</p>
+</div>
+
+<hr>
+
+<h2 id="q">お問い合わせ</h2>
+
+<strong><a href="https://twitter.com/tw_gensho" target="blank" rel="noreferrer noopener">Twitter</a></strong> 
+{% endblock %}

@@ -1,0 +1,63 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+#toc{
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  background-color: #e9ecef;
+}
+
+.parent {
+    text-align: center;
+  }
+  .center {
+    display: inline-block;
+  }
+  .my-skyblue {
+    color: skyblue
+  }
+  .my-orange {
+    color: #fecb81
+  }
+
+.name-button , .vote-button{
+    float: left;
+    margin-right: 10px;
+}
+
+.tweet-button , .star{
+    float: right;
+
+}
+
+h2 a:hover {
+    color: white;
+}
+
+h2 a {
+    color: white;
+}
+
+h3 a:hover {
+  color: white;
+}
+
+h3 a {
+  color: white;
+}
+
+.data{
+    margin-top: 50px;
+}
+
+.cf{
+  clear: both;
+}
+
+

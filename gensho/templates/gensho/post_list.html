@@ -1,0 +1,64 @@
+{% extends 'gensho/base.html' %}
+{% load social_share %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-3"><strong>GENSHO</strong></h1>
+        <p class="lead">現象にとりあえず名前をつけていくサービス</p>
+        <hr class="my-2">
+    </div>
+
+
+
+{% for post in post_list %}
+
+<div class="card mb-3">
+    <h2 class="card-header bg-dark text-white"><a href="{% url 'gensho:detail' post.pk %}">{{post.title}} {{post.pk}} </a><span class="star"><i class="fas fa-star my-orange fa-x"></i> : {{post.star}}</span></h2>
+  <div class="card-body">
+    <p>{{post.text | linebreaksbr}}</p>
+    
+    <p class="data"><strong><a href="https://twitter.com/{{post.post_user}}?lang=ja" target="blank" rel="noreferrer noopener">@{{post.post_user}}</a></strong> {{post.created_at}} </p>
+
+    <div class="name-button">
+    <a href="{% url 'gensho:detail' post.pk %}" class="btn btn-dark">名前をつける</a>
+    </div>
+
+    <div class="vote-button">
+    <form action="{% url 'gensho:post_vote' post.pk %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Like" name='choice' class="btn btn-primary">
+    </form>
+    </div>
+
+    <div class="tweet-button">
+    {% post_to_twitter "{{post.title}} {{post.pk}} {{post.text | truncatechars:20}}" object_or_url "" %}
+    </div>
+
+
+    <div class="cf"></div>
+    <br><br>
+    {% if post.get_days_ago %}
+    {% for comment in post.comment_set.all|dictsort:"vote_star"|slice:"0::-1"  %}
+
+  <div class="card mb-3 mt-3">
+      <h2 class="card-header bg-success text-white"><a href="https://twitter.com/{{comment.comment_user}}?lang=ja" target="blank" rel="noreferrer noopener">@{{comment.comment_user}}</a><span class="star"><i class="fas fa-star my-orange fa-x"></i> : {{comment.vote_star}}</span></h2>
+    <div class="card-body">
+      <p>{{comment.text | linebreaksbr}}   </p>
+      <p>{{comment.created_at}}</p>
+    </div>
+  </div>
+    
+    {% endfor %}
+    {% endif %}
+
+
+  </div>
+</div>
+
+{% endfor %}
+<div class="parent">
+  <div class="center">
+{% include 'gensho/page.html' %}
+  </div>
+</div>
+{% endblock %}
